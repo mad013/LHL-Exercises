@@ -8,19 +8,20 @@
 # You'll probably want to write other methods, but this 
 # encapsulates the core dog logic
 def shakil_the_dog(dogspeak)
-  #loop statement including print statements and gets.chomp
-  if dogspeak == "woof"
+  case dogspeak 
+  when "woof"
     puts "WOOF WOOF WOOF"
-  elsif dogspeak == "shakil stop" || dogspeak == "Shakil STOP!"
-    # Moment of silence 
-  elsif dogspeak == "meow"
+  when "shakil stop" || "Shakil STOP!"
+    #silence
+  when "meow"
     puts "woof woof woof woof woof"
-  elsif dogspeak.include? "treat" #determine how to say anything else including word "treat"
-    # Moment of silence
-  elsif dogspeak == "go away" || dogspeak == "No"
-  else      
+  when dogspeak.include? "treat"
+    #silence
+  when "go away" || "No"
+  else 
     puts "woof"
-  end
+  end 
+end 
   
   
 end
