@@ -28,17 +28,17 @@ end
 #user_input = gets.chomp
 #candidate_menu(user_input) #calling function
 
-puts years_total(@candidates)
+#puts years_total(@candidates)
 
 
 #Experience level:
 #puts "answer is #{is_experienced?(@candidates[0])}"
 
 #find by id:
-#puts  "5: #{find(@candidates[5])}"
+#puts "#{find(@candidates[1])}"
 
 #find qualified candidates(test each separately):
-#puts "#{is_experienced?(@candidates[1])}"s
+puts "#{is_experienced?(@candidates[1])}"
 #puts "#{is_old_enough?(@candidates[6])}"
 #puts "#{applied_recently?(@candidates[0])}"
 #puts "#{has_active_github?(@candidates[4])}"

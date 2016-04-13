@@ -3,14 +3,20 @@
 
 
 def find(id)
-  if @candidates.find {|candidate| candidate[:id] == id}
-    return @candidates.find {|candidate| candidate[:id] == id}
-  else 
-    "Candidate not found." #don't need puts
-  end 
+  if @candidates.nil?
+    raise "@candidates must be an array"
+  end
+    if @candidates.find {|candidate| candidate[:id] == id}
+        return @candidates.find {|candidate| candidate[:id] == id}
+      else 
+        "Candidate not found." #don't need puts
+    end 
 end 
 
 def is_experienced?(current_candidate)
+  unless candidate.has_key?(:years_of_experience)
+    raise ArgumentError, "candidate must have a :years_of_experience key"
+  end 
   is_experienced = []
   current_candidate[:years_of_experience] >= 2 
 end
