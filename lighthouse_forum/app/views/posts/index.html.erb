@@ -1,0 +1,8 @@
+<h1>Marie's Lighthouse Forum</h1>
+<hr>
+<%= link_to 'Create a post!', new_post_path %>
+<% @posts.each do |post| %>
+  <h2><%= link_to post.title, post_path(post) %></h2>
+  <p><%= post.text %></p>
+  <small>- <%= post.author %></small>
+<% end %>
