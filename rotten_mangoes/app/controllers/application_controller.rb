@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
 
   def current_user #regular methods in this file can be accessed by models only
     @current_user ||= User.find(session[:user_id]) if session [:user_id]
+    binding.pry
   end 
 
   helper_method :current_user #helper method is written to be accessed by the views (anything html.erb) 
