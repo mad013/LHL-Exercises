@@ -1,7 +1,8 @@
 class ReviewsController < ApplicationController
   
   before_filter :load_movie #loading parent resource from nested resource controller
-
+  before_filter :restrict_access
+  
   def new  
     @review = @movie.reviews.build #same as: @review = Review.new(movie_id: @movie.id), automatic assignment of the foreign key
   end
